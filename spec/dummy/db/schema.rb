@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_24_153504) do
+ActiveRecord::Schema.define(version: 2022_01_25_040916) do
+
+  create_table "taggings", force: :cascade do |t|
+    t.integer "tag_id", null: false
+    t.string "taggable_type", null: false
+    t.integer "taggable_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["tag_id", "taggable_id", "taggable_type"], name: "index_unique_tagged_item"
+    t.index ["tag_id"], name: "index_taggings_on_tag_id"
+    t.index ["taggable_type", "taggable_id"], name: "index_taggings_on_taggable"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_tags_on_name"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "slug", null: false
@@ -44,4 +62,5 @@ ActiveRecord::Schema.define(version: 2022_01_24_153504) do
     t.index ["last_name"], name: "index_users_on_last_name"
   end
 
+  add_foreign_key "taggings", "tags", on_delete: :cascade
 end
