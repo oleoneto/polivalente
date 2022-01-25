@@ -1,0 +1,10 @@
+Description:
+    Stubs out a model concern.
+
+    This generator accepts one argument, the name of the concern, CamelCased or under_scored.
+
+Example:
+    rails generate concern Thing 
+
+    This will create:
+        apps/models/concerns/thing.rb

@@ -1,0 +1,8 @@
+Description:
+    Stubs out a validator.
+
+Example:
+    rails generate validator Thing
+
+    This will create:
+        apps/validator/thing_validator.rb
