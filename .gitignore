@@ -10,3 +10,4 @@
 /spec/dummy/storage/
 /spec/dummy/tmp/
 *.gem
+.DS_Store

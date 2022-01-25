@@ -5,6 +5,12 @@ require "devise"
 
 module Polivalente
   # Attributes
+  mattr_accessor :supported_locales
+
+  self.supported_locales = [:en]
+
+  # Modules
+  autoload :UserLocale,    "polivalente/user_locale"
 
   # Configuration
 
