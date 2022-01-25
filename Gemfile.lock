@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    polivalente (0.1.1)
+    polivalente (0.2.0)
       devise (~> 4.8)
       rails (~> 7.0, >= 7.0.0)
 
