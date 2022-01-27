@@ -26,8 +26,7 @@ module Polivalente
 
       def tag_list=(names)
         self.tags = names.split(",").map do |name|
-          tag = name.downcase.strip.delete_prefix("#")
-          Tag.where(name: tag).first_or_create! if tag.length >= 3
+          Tag.where(name: name).first_or_create!
         end.compact
       end
     end

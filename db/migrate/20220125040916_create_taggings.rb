@@ -1,8 +1,8 @@
 class CreateTaggings < ActiveRecord::Migration[7.0]
   def change
     create_table :taggings do |t|
-      t.belongs_to :tag, null: false, foreign_key: { on_delete: :cascade }
-      t.references :taggable, polymorphic: true, null: false, index: true, on_delete: :cascade
+      t.belongs_to :tag,      null: false, foreign_key: { on_delete: :cascade }
+      t.references :taggable, null: false, polymorphic: true, index: true
 
       t.timestamps
 
