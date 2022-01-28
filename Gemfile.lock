@@ -1,8 +1,9 @@
 PATH
   remote: .
   specs:
-    polivalente (0.1.1)
+    polivalente (0.2.0)
       devise (~> 4.8)
+      discard (~> 1.2)
       rails (~> 7.0, >= 7.0.0)
 
 GEM
@@ -85,6 +86,8 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
     digest (3.1.0)
+    discard (1.2.1)
+      activerecord (>= 4.2, < 8)
     erubi (1.10.0)
     factory_bot (6.2.0)
       activesupport (>= 5.0.0)
