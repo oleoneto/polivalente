@@ -16,5 +16,9 @@ module Polivalente
     validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
     validates_uniqueness_of :email
     validates_length_of :password, minimum: 8
+
+    def name
+      "#{first_name} #{last_name}"
+    end
   end
 end

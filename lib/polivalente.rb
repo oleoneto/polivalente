@@ -1,7 +1,11 @@
 require "polivalente/version"
 require "polivalente/railtie"
 require "polivalente/engine"
+
+# Third-party
+
 require "devise"
+require "factory_bot_rails"
 
 module Polivalente
   # Attributes

@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(version: 2022_01_24_153504) do
 
   create_table "users", force: :cascade do |t|
-    t.string "slug", null: false
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.boolean "is_admin", default: false, null: false
