@@ -5,11 +5,17 @@ require "devise"
 
 module Polivalente
   # Attributes
+  mattr_accessor :supported_locales
+
+  self.supported_locales = [:en]
+
+  # Modules
+  autoload :UserLocale,    "polivalente/user_locale"
 
   # Configuration
 
+  # do not prefix table names with `polivantente_`
   def self.table_name_prefix
-    # do not prefix table names with `polivantente_`
   end
 
   def self.setup
