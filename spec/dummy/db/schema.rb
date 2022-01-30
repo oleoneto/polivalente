@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_25_144342) do
+ActiveRecord::Schema.define(version: 2022_01_30_033524) do
 
   create_table "action_mailbox_inbound_emails", force: :cascade do |t|
     t.integer "status", default: 0, null: false
@@ -57,6 +57,17 @@ ActiveRecord::Schema.define(version: 2022_01_25_144342) do
     t.integer "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "archives", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "archivable_type", null: false
+    t.integer "archivable_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["archivable_type", "archivable_id"], name: "index_archives_on_archivable"
+    t.index ["user_id", "archivable_id", "archivable_type"], name: "index_unique_archive_item"
+    t.index ["user_id"], name: "index_archives_on_user_id"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -149,6 +160,7 @@ ActiveRecord::Schema.define(version: 2022_01_25_144342) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "archives", "users", on_delete: :cascade
   add_foreign_key "comments", "users", on_delete: :cascade
   add_foreign_key "reactions", "users", on_delete: :cascade
   add_foreign_key "taggings", "tags", on_delete: :cascade
