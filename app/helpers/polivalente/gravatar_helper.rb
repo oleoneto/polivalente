@@ -1,8 +1,8 @@
 module Polivalente
   module GravatarHelper
     # Based on http://expo.stimulusreflex.com/demos/gravatar
-    def user_gravatar(email, options)
-      return unless %r{[^@]+@[^.]+\..+}.match?(email)
+    def user_gravatar(email, options = {})
+      return unless URI::MailTo::EMAIL_REGEXP.match?(email)
       email_md5 = Digest::MD5.hexdigest(email.downcase.strip)
       query_params = url_params(options)
       @gravatar_image_url = "https://www.gravatar.com/avatar/#{email_md5}#{query_params}"
