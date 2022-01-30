@@ -45,6 +45,11 @@ module Polivalente
         expect(User.method_defined?(:name)).to eq(true)
         expect(User.new.respond_to?(:name)).to eq(true)
       end
+
+      it "should respond to :photo" do
+        expect(User.method_defined?(:photo)).to eq(true)
+        expect(User.new.respond_to?(:photo)).to eq(true)
+      end
     end
   end
 end
