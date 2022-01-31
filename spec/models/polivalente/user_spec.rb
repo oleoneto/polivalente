@@ -23,6 +23,12 @@ module Polivalente
         expect(instance).to_not be_valid
       end
 
+      it "should not be valid with a duplicate :email" do
+        create(:user)
+        instance = User.new(first_name: 'Oliver', last_name: 'Doe', email: 'oliver@example.com', password: 'unsafe-password')
+        expect(instance).to_not be_valid
+      end
+
       it "should not be valid without a valid :email" do
         instance = User.new(first_name: 'Oliver', last_name: 'Doe', email: '@NO.EMAIL.COM', password: 'unsafe-password')
         expect(instance).to_not be_valid

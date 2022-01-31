@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.boolean :is_verified,  null: false,   index: true, default: false
 
       ## Devise::DatabaseAuthenticatable
-      t.string :email,              null: false, default: "", unique: true
+      t.string :email,              null: false, default: "", index: { unique: true }
       t.string :encrypted_password, null: false, default: ""
 
       ## Devise::Recoverable

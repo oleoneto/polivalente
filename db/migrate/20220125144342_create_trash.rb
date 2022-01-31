@@ -6,7 +6,7 @@ class CreateTrash < ActiveRecord::Migration[6.1]
 
       t.timestamps
 
-      t.index [:user_id, :trashable_id, :trashable_type], name: "index_unique_trash_item"
+      t.index [:user_id, :trashable_id, :trashable_type], unique: true, name: "index_unique_trash_item"
     end
   end
 end

@@ -21,6 +21,12 @@ module Polivalente
         instance = Tagging.new(tag: tag, taggable: nil)
         expect(instance).to_not be_valid
       end
+
+      it "should not be valid with a duplicate tag on the same taggable object" do
+        create(:tagging, tag: tag, taggable: taggable)
+        instance = Tagging.new(tag: tag, taggable: taggable)
+        expect(instance).to_not be_valid
+      end
     end
 
     describe "associations" do

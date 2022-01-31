@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :tagging, class: "Polivalente::Tagging" do
     tag       { nil }
-    taggabble { nil }
+    taggable  { nil }
   end
 end

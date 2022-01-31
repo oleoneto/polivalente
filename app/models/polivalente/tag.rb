@@ -1,8 +1,11 @@
 module Polivalente
   class Tag < ApplicationRecord
+    include Sortable
+
     has_many :taggings
 
     validates_length_of :name, minimum: 2, maximum: 20
+    validates_uniqueness_of :name
     before_save :sanitize_name!
 
     private

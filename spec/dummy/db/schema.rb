@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 2022_01_30_033524) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["archivable_type", "archivable_id"], name: "index_archives_on_archivable"
-    t.index ["user_id", "archivable_id", "archivable_type"], name: "index_unique_archive_item"
+    t.index ["user_id", "archivable_id", "archivable_type"], name: "index_unique_archive_item", unique: true
     t.index ["user_id"], name: "index_archives_on_user_id"
   end
 
@@ -104,7 +104,7 @@ ActiveRecord::Schema.define(version: 2022_01_30_033524) do
     t.integer "taggable_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["tag_id", "taggable_id", "taggable_type"], name: "index_unique_tagged_item"
+    t.index ["tag_id", "taggable_id", "taggable_type"], name: "index_unique_tagged_item", unique: true
     t.index ["tag_id"], name: "index_taggings_on_tag_id"
     t.index ["taggable_type", "taggable_id"], name: "index_taggings_on_taggable"
   end
@@ -113,7 +113,7 @@ ActiveRecord::Schema.define(version: 2022_01_30_033524) do
     t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["name"], name: "index_tags_on_name"
+    t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
   create_table "trash", force: :cascade do |t|
@@ -123,7 +123,7 @@ ActiveRecord::Schema.define(version: 2022_01_30_033524) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["trashable_type", "trashable_id"], name: "index_trash_on_trashable"
-    t.index ["user_id", "trashable_id", "trashable_type"], name: "index_unique_trash_item"
+    t.index ["user_id", "trashable_id", "trashable_type"], name: "index_unique_trash_item", unique: true
     t.index ["user_id"], name: "index_trash_on_user_id"
   end
 
@@ -152,6 +152,7 @@ ActiveRecord::Schema.define(version: 2022_01_30_033524) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["discarded_at"], name: "index_users_on_discarded_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["first_name"], name: "index_users_on_first_name"
     t.index ["is_admin"], name: "index_users_on_is_admin"
     t.index ["is_verified"], name: "index_users_on_is_verified"

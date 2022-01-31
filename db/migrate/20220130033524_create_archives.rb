@@ -6,7 +6,7 @@ class CreateArchives < ActiveRecord::Migration[7.0]
 
       t.timestamps
 
-      t.index [:user_id, :archivable_id, :archivable_type], name: "index_unique_archive_item"
+      t.index [:user_id, :archivable_id, :archivable_type], unique: true, name: "index_unique_archive_item"
     end
   end
 end

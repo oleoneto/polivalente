@@ -27,6 +27,12 @@ module Polivalente
         instance = Tag.new(name: "a")
         expect(instance).to_not be_valid
       end
+
+      it "should not be valid if the tag is a duplicate" do
+        create(:tag, name: "social")
+        instance = Tag.new(name: "social")
+        expect(instance).to_not be_valid
+      end
     end
 
     describe "name sanitization" do
