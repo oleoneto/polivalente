@@ -21,6 +21,11 @@ Or install it yourself as:
 $ gem install polivalente
 ```
 
+Copy migrations:
+```bash
+$ rails g polivalente:install
+```
+
 ## Contributing
 Contribution directions go here.
 
