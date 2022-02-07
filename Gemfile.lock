@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     polivalente (0.2.0)
+      active_model_serializers (~> 0.10)
       devise (~> 4.8)
       discard (~> 1.2)
       rails (~> 7.0, >= 7.0.0)
@@ -54,6 +55,11 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_model_serializers (0.10.13)
+      actionpack (>= 4.1, < 7.1)
+      activemodel (>= 4.1, < 7.1)
+      case_transform (>= 0.2)
+      jsonapi-renderer (>= 0.1.1.beta1, < 0.3)
     activejob (7.0.1)
       activesupport (= 7.0.1)
       globalid (>= 0.3.6)
@@ -76,6 +82,8 @@ GEM
       tzinfo (~> 2.0)
     bcrypt (3.1.16)
     builder (3.2.4)
+    case_transform (0.2)
+      activesupport
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     devise (4.8.1)
@@ -94,11 +102,14 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
+    faker (2.19.0)
+      i18n (>= 1.6, < 2)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     io-wait (0.2.1)
+    jsonapi-renderer (0.2.2)
     loofah (2.13.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -196,6 +207,7 @@ PLATFORMS
 
 DEPENDENCIES
   factory_bot_rails (~> 6.2)
+  faker (~> 2.19)
   polivalente!
   rspec-rails (~> 5.0)
   sqlite3

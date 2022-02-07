@@ -4,6 +4,7 @@ require "polivalente/engine"
 
 # Third-party
 
+require "active_model_serializers"
 require "devise"
 require "discard"
 require "factory_bot_rails"

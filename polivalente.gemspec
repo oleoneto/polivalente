@@ -20,8 +20,10 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "rails", "~> 7.0", ">= 7.0.0"
+  spec.add_dependency "active_model_serializers", "~> 0.10"
   spec.add_dependency "devise", "~> 4.8"
   spec.add_dependency "discard", "~> 1.2"
   spec.add_development_dependency "factory_bot_rails", "~> 6.2"
+  spec.add_development_dependency "faker", "~> 2.19"
   spec.add_development_dependency "rspec-rails", "~> 5.0"
 end
