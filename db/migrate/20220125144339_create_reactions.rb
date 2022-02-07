@@ -3,7 +3,7 @@ class CreateReactions < ActiveRecord::Migration[7.0]
     create_table :reactions do |t|
       t.belongs_to :user,      null: false, index: true, foreign_key: { on_delete: :cascade }
       t.references :reactable, null: false, polymorphic: true
-      t.string     :kind,      null: false, index: true, limit: 20
+      t.integer    :kind,      null: false, index: true, limit: 20
       t.json       :data,      null: true,  default: "{}"
 
       t.timestamps

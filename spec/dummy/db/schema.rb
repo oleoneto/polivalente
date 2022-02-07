@@ -88,7 +88,7 @@ ActiveRecord::Schema.define(version: 2022_01_30_033524) do
     t.integer "user_id", null: false
     t.string "reactable_type", null: false
     t.integer "reactable_id", null: false
-    t.string "kind", limit: 20, null: false
+    t.integer "kind", limit: 20, null: false
     t.json "data", default: "{}"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

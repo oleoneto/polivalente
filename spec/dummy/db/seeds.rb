@@ -33,6 +33,23 @@ create_user(password: "notsafeforprod", is_admin: true)
 # Tags
 Polivalente::Tag.destroy_all
 
-Polivalente::Tag.create(name: "Networking")
 Polivalente::Tag.create(name: "Jobs")
+Polivalente::Tag.create(name: "Networking")
 Polivalente::Tag.create(name: "Social")
+
+# Comments
+Polivalente::Comment.destroy_all
+
+Polivalente::Comment.create(user: user, commentable: Polivalente::Tag.first, content: "LinkedIn, anyone?")
+Polivalente::Comment.create(user: user, commentable: Polivalente::Tag.second, content: "Any good advice about how to network effectively?")
+Polivalente::Comment.create(user: user, commentable: Polivalente::Tag.third, content: "The new normal")
+
+
+# Reactions
+
+Polivalente::Reaction.destroy_all
+
+Polivalente::Reaction.create(user: user, kind: "bookmark", reactable: Polivalente::Comment.first)
+Polivalente::Reaction.create(user: user, kind: "like", reactable: Polivalente::Comment.first)
+Polivalente::Reaction.create(user: user, kind: "like", reactable: Polivalente::Comment.second)
+Polivalente::Reaction.create(user: user, kind: "like", reactable: Polivalente::Comment.third)

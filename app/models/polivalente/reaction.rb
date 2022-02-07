@@ -1,5 +1,6 @@
 module Polivalente
   class Reaction < ApplicationRecord
+    include Sortable
     include UserOwned
 
     belongs_to :reactable, polymorphic: true
