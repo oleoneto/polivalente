@@ -10,12 +10,15 @@ module Polivalente
       g.factory_bot dir:     "spec/factories"
     end
 
-    initializer "polivalente.factories", after: "factory_bot.set_factory_paths" do
-      FactoryBot.definition_file_paths << File.expand_path('../../../spec/factories', __FILE__) if defined?(FactoryBot)
+    # Loads engine helpers in main application
+    initializer "local_helper.action_controller" do
+      ActiveSupport.on_load :action_controller do
+        helper Polivalente::Engine.helpers
+      end
     end
-  end
 
-  # Do not prefix table names with `polivantente_`
-  def self.table_name_prefix
+    # Do not prefix table names with `polivantente_`
+    def self.table_name_prefix
+    end
   end
 end

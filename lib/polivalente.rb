@@ -1,25 +1,24 @@
 require "polivalente/version"
 require "polivalente/railtie"
 require "polivalente/engine"
+require "polivalente/configuration"
 
 # Third-party
 
 require "active_model_serializers"
 require "devise"
 require "discard"
-require "factory_bot_rails"
 
 module Polivalente
-  # Attributes
-  mattr_accessor :inactive_account_ttl
-  mattr_accessor :spam_account_ttl
-  mattr_accessor :supported_locales
-  mattr_accessor :trash_ttl
+  class << self
+    attr_reader :config
 
-  self.inactive_account_ttl = 60.days
-  self.spam_account_ttl     = 4.days
-  self.supported_locales    = [:en]
-  self.trash_ttl            = 30.days
+    def configure
+      @config = Configuration.new
+      yield config
+    end
+  end
+  
 
   # Modules
   autoload :UserLocale,    "polivalente/user_locale"
@@ -28,9 +27,5 @@ module Polivalente
 
   # do not prefix table names with `polivantente_`
   def self.table_name_prefix
-  end
-
-  def self.setup
-    yield self
   end
 end

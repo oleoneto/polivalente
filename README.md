@@ -1,5 +1,5 @@
 # Polivalente
-Short description and motivation.
+Reusable generic features for Rails applications
 
 ## Usage
 How to use my plugin.
@@ -21,10 +21,29 @@ Or install it yourself as:
 $ gem install polivalente
 ```
 
-Copy migrations:
+Installation (copies migrations and [initializer](lib/generators/polivalente/polivalente.rb)):
 ```bash
 $ rails g polivalente:install
 ```
+
+Copy default `User` model:
+```bash
+$ rails g polivalente:user
+```
+
+Alternatively, set the `user_class` in `config`:
+```ruby
+Polivalente.configure do |config|
+  # ...
+  config.user_class = "MyUser"
+end
+```
+
+Setup `devise`:
+```bash
+$ rails g devise:install
+```
+
 
 ## Contributing
 Contribution directions go here.

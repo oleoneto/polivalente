@@ -1,5 +1,5 @@
 module Polivalente
-  class PingController < ActionController::Base
+  class PingController < ApplicationController
     def index
       render json: { status: 'OK' }, status: :ok
     end

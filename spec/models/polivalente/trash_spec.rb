@@ -3,7 +3,7 @@ require 'rails_helper'
 ActiveJob::Base.queue_adapter = :test
 
 module Polivalente
-  RSpec.describe Trash, type: :model do  
+  RSpec.describe Trash, type: :model do
     describe "validations" do
       let(:user) { create(:user) }
       let(:trashable) { create(:tag) }

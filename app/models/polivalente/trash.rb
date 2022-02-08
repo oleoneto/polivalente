@@ -10,7 +10,7 @@ module Polivalente
     self.table_name = :trash
 
     # Stale records are those that have been in the trash for `T` amount of time
-    scope :stale, -> { where("created_at <= ?", Time.zone.now - Polivalente::trash_ttl) }
+    scope :stale, -> { where("created_at <= ?", Time.zone.now - Polivalente.config.trash_ttl) }
 
     def self.clean_stale!
       stale.destroy_all
@@ -25,7 +25,7 @@ module Polivalente
     # Schedule the deletion of this and parent record
     def schedule_deletion
       CleanTrashJob
-        .set(wait_until: Polivalente::trash_ttl.from_now)
+        .set(wait_until: Polivalente.config.trash_ttl.from_now)
         .perform_later(self)
     end
   end

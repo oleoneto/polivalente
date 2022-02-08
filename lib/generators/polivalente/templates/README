@@ -1,0 +1,10 @@
+===============================================================================
+
+Now that you've installed the Polivalente, run `rails g polivalente:user` to
+copy the default user model or set the `user_class` attribute in
+the gem's initializer.
+
+Then, proceed to run the installer for Devise.
+
+For help, please check this gem's README on GitHub. Available at:
+https://github.com/oleoneto/polivalente

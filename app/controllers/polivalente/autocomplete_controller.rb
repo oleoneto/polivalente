@@ -8,7 +8,9 @@ module Polivalente
     end
 
     def users
-      @users = User.all.latest
+      user_class = Polivalente.config.user_class.constantize
+
+      @users = user_class.all.latest
       render json: @users, status: 200
     end
 
