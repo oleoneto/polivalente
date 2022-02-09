@@ -26,7 +26,7 @@ module Polivalente
         devise_class = Polivalente.config.user_class.constantize
 
         route "mount Polivalente::Engine => ''"
-        route "devise_for :users"
+        route "devise_for :users, path: 'auth'"
       end
 
       def show_readme
