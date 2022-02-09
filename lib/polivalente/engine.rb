@@ -17,6 +17,13 @@ module Polivalente
       end
     end
 
+    initializer "polivalente.assets" do |app|
+      if Rails.application.config.respond_to?(:assets)
+        app.config.assets.precompile << "polivalente/application.js"
+        app.config.assets.precompile << "polivalente/application.css"
+      end
+    end
+
     # Do not prefix table names with `polivantente_`
     def self.table_name_prefix
     end

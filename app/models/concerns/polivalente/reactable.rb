@@ -4,7 +4,7 @@ module Polivalente
     prepend Discard::Model
 
     included do
-      has_many :reactions, as: :reactable, dependent: :destroy
+      has_many :reactions, as: :reactable, dependent: :destroy, class_name: "Polivalente::Reaction"
 
       scope :with_reactions, -> { include(:reactions) }
 

@@ -6,5 +6,20 @@ the gem's initializer.
 
 Then, proceed to run the installer for Devise.
 
+You can customise your devise routes (in config/routes.rb) like so:
+
+```
+devise_for :user, path: 'auth', path_names: {
+  sign_in: 'login',
+  sign_up: 'signup',
+  sign_out: 'logout',
+  confirmation: 'verification',
+  registration: 'register',
+  password: 'secret',
+  unlock: 'unblock',
+},
+controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+```
+
 For help, please check this gem's README on GitHub. Available at:
 https://github.com/oleoneto/polivalente

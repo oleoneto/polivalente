@@ -5,7 +5,7 @@ module Polivalente
     extend ActiveSupport::Concern
 
     included do
-      has_many :comments, dependent: :destroy
+      has_many :comments, dependent: :destroy, class_name: "Polivalente::Comment"
 
       scope :with_comments, -> { includes(:comments) }
     end

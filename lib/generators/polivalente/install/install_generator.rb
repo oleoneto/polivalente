@@ -6,27 +6,22 @@ module Polivalente
       def copy_migrations
         rails_command "railties:install:migrations FROM=polivalente", inline: true
       end
-      
-      def copy_locales
-        copy_file "../../../../config/locales/en.yml", "config/locales/en.yml"
-        copy_file "../../../../config/locales/es.yml", "config/locales/es.yml"
-        copy_file "../../../../config/locales/fr.yml", "config/locales/fr.yml"
-        copy_file "../../../../config/locales/pt.yml", "config/locales/pt.yml"
-      end
 
       def copy_initializer
         template "polivalente.rb", "config/initializers/polivalente.rb"
       end
 
-      def copy_initializer
+      def copy_ams_initializer
         template "active_model_serializers.rb", "config/initializers/active_model_serializers.rb"
       end
 
       def add_route
-        devise_class = Polivalente.config.user_class.constantize
-
         route "mount Polivalente::Engine => ''"
-        route "devise_for :users, path: 'auth'"
+        route "devise_for :users, path: 'auth', path_names: { sign_in: 'login', sign_out: 'logout' }"
+      end
+
+      def add_devise_i18n_gem
+        gem 'devise-18n'
       end
 
       def show_readme

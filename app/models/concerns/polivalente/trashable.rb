@@ -4,7 +4,7 @@ module Polivalente
     prepend Discard::Model
 
     included do
-      has_many :trashes, as: :trashable, dependent: :destroy
+      has_many :trashes, as: :trashable, dependent: :destroy, class_name: "Polivalente::Trash"
 
       after_discard :place_in_trash!
       after_undiscard :remove_from_trash!

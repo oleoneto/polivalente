@@ -4,7 +4,8 @@ module Polivalente
     extend ActiveSupport::Concern
 
     included do
-      has_many :archives, dependent: :destroy
+      has_many :archives, dependent: :destroy, class_name: "Polivalente::Archive"
+
       scope :with_archives, -> { include(:archives) }
     end
   end

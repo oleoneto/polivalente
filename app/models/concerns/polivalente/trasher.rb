@@ -6,7 +6,8 @@ module Polivalente
     extend ActiveSupport::Concern
 
     included do
-      has_many :trashes, dependent: :destroy
+      has_many :trashes, dependent: :destroy, class_name: "Polivalente::Trash"
+
       scope :with_trash, -> { include(:trashes) }
     end
   end
