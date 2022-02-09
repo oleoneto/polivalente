@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/oleoneto/cartofi/compare/v0.3.0...v0.3.1) (2022-02-09)
+
+
+### Bug Fixes
+
+* move devise config to dummy app ([690134d](https://github.com/oleoneto/cartofi/commits/690134d0c8f601149a195c358f791de096fd8453))
+
 ## 0.3.0 (2022-02-08)
 
 
