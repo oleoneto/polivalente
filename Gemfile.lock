@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    polivalente (0.3.1)
+    polivalente (0.4.0)
       active_model_serializers (~> 0.10)
       devise (~> 4.8)
       discard (~> 1.2)

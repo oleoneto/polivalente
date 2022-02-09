@@ -1,10 +1,10 @@
 class CreateUsers < ActiveRecord::Migration[7.0]
   def change
     create_table :users do |t|
-      t.string  :first_name,   null: false,   index: true
-      t.string  :last_name,    null: false,   index: true
-      t.boolean :is_admin,     null: false,   index: true, default: false
-      t.boolean :is_verified,  null: false,   index: true, default: false
+      t.string  :first_name,   null: false, index: true
+      t.string  :last_name,    null: false, index: true
+      t.boolean :is_admin,     null: false, index: true, default: false
+      t.boolean :is_verified,  null: false, index: true, default: false
 
       ## Devise::DatabaseAuthenticatable
       t.string :email,              null: false, default: "", index: { unique: true }
@@ -25,9 +25,10 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.string   :last_sign_in_ip
 
       ## Devise::Confirmable
-      t.string   :confirmation_token, unique: true
+      t.string   :confirmation_token, index: { unique: true }
       t.datetime :confirmed_at
       t.datetime :confirmation_sent_at
+      t.string   :unconfirmed_email # Only if using reconfirmable
 
       ## Devise::Lockable
       t.integer  :failed_attempts, default: 0, null: false
