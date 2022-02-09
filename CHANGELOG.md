@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.2](https://github.com/oleoneto/cartofi/compare/v0.3.1...v0.3.2) (2022-02-09)
+
+
+### Bug Fixes
+
+* remove router_name in devise config ([967bc7a](https://github.com/oleoneto/cartofi/commits/967bc7ac0f7a62a9abffb72773821a25d6c1ab0b))
+
 ### [0.3.1](https://github.com/oleoneto/cartofi/compare/v0.3.0...v0.3.1) (2022-02-09)
 
 
