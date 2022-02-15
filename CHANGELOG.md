@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/oleoneto/cartofi/compare/v0.4.0...v0.5.0) (2022-02-15)
+
+
+### Features
+
+* generators ([b2c86b9](https://github.com/oleoneto/cartofi/commits/b2c86b9632d6387fddad0508f231e9c184ee4085))
+
 ## [0.4.0](https://github.com/oleoneto/cartofi/compare/v0.3.2...v0.4.0) (2022-02-09)
 
 
