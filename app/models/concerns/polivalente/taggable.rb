@@ -6,7 +6,7 @@ module Polivalente
       attr_accessor :name, :tag_list
 
       has_many :taggings, as: :taggable, class_name: "Polivalente::Tagging"
-      has_many :tags, through: :taggings
+      has_many :tags, through: :taggings, class_name: "Polivalente::Tag"
 
       scope :with_taggings, -> { include(:taggings) }
 
