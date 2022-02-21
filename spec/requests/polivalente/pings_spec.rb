@@ -2,7 +2,7 @@ require 'rails_helper'
 
 module Polivalente
   RSpec.describe "Pings", type: :request do
-    before(:example) { get "/ping" }  # FIXME: get ping_index
+    before(:example) { get ping_index_url }  # FIXME: get ping_index
   
     describe "GET /ping" do
       it "returns a status of 200" do
