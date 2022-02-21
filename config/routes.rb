@@ -3,7 +3,7 @@ Polivalente::Engine.routes.draw do
   resources :ping, only: [:index]
 
   namespace :autocomplete, defaults: { format: :json } do
-    get 'tags',       as: :tag_completion
-    get 'users',      as: :user_completion
+    get 'tags'
+    get 'users'
   end
 end
