@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.2](https://github.com/oleoneto/cartofi/compare/v0.5.1...v0.5.2) (2022-02-21)
+
+
+### Bug Fixes
+
+* adds class_name to archivable ([eff0854](https://github.com/oleoneto/cartofi/commits/eff08543fbaa6cb1d33f34b74e516e74b9d0d1ae))
+* sanitize tag list ([3bd5540](https://github.com/oleoneto/cartofi/commits/3bd5540d25cc34464aab534d9d3a60c6d6ec567b))
+
 ### [0.5.1](https://github.com/oleoneto/cartofi/compare/v0.5.0...v0.5.1) (2022-02-15)
 
 
