@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_30_033524) do
+ActiveRecord::Schema.define(version: 2022_02_21_013006) do
 
   create_table "action_mailbox_inbound_emails", force: :cascade do |t|
     t.integer "status", default: 0, null: false
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2022_01_30_033524) do
     t.string "record_type", null: false
     t.integer "record_id", null: false
     t.integer "blob_id", null: false
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: 6, null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2022_01_30_033524) do
     t.string "service_name", null: false
     t.bigint "byte_size", null: false
     t.string "checksum", null: false
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: 6, null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
@@ -84,12 +84,22 @@ ActiveRecord::Schema.define(version: 2022_01_30_033524) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
+  create_table "follows", force: :cascade do |t|
+    t.integer "follower_id", null: false
+    t.integer "followee_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["followee_id"], name: "index_follows_on_followee_id"
+    t.index ["follower_id", "followee_id"], name: "index_unique_follow_relationship", unique: true
+    t.index ["follower_id"], name: "index_follows_on_follower_id"
+  end
+
   create_table "reactions", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "reactable_type", null: false
     t.integer "reactable_id", null: false
     t.integer "kind", limit: 20, null: false
-    t.json "data", default: "{}"
+    t.json "data", default: "\"\\\"{}\\\"\""
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["kind"], name: "index_reactions_on_kind"
@@ -163,6 +173,8 @@ ActiveRecord::Schema.define(version: 2022_01_30_033524) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "archives", "users", on_delete: :cascade
   add_foreign_key "comments", "users", on_delete: :cascade
+  add_foreign_key "follows", "users", column: "followee_id", on_delete: :cascade
+  add_foreign_key "follows", "users", column: "follower_id", on_delete: :cascade
   add_foreign_key "reactions", "users", on_delete: :cascade
   add_foreign_key "taggings", "tags", on_delete: :cascade
   add_foreign_key "trash", "users", on_delete: :cascade
