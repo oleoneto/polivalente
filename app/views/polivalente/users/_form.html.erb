@@ -1,0 +1,38 @@
+<%= form_with(model: user, :html => {class: 'form flex flex-col text-primary'}) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation" class="text-primary">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="my-2">
+    <%= form.text_field :first_name, class: "input-base bg-primary text-secondary-x border-tertiary text-2xl leading-8 font-extrabold tracking-tight sm:text-4xl" %>
+  </div>
+
+  <div class="my-2">
+    <%= form.text_field :last_name, class: "input-base bg-primary text-secondary-x border-tertiary text-2xl leading-8 font-extrabold tracking-tight sm:text-4xl" %>
+  </div>
+
+  <div class="my-2">
+    <%= form.file_field :photo, class: "input-base bg-primary text-secondary-x border-tertiary text-2xl leading-8 font-extrabold tracking-tight sm:text-4xl" %>
+  </div>
+
+
+  <div class="actions">
+    <div class="flex justify-between">
+      <%= form.submit nil, class: "py-2 px-4 mb-6 bg-green-600 hover:bg-green-800 text-white text-sm font-bold rounded transition duration-200" %>
+
+      <div class="flex space-x-3">
+        <%= link_to 'Cancel', user.new_record? ? users_url : user_url, class: "py-2 px-4 mb-6 bg-secondary border-2 hover:bg-tertiary text-primary text-sm font-bold rounded transition duration-200" %>
+      </div>
+
+    </div>
+  </div>
+<% end %>
+
