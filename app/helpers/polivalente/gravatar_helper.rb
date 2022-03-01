@@ -9,10 +9,6 @@ module Polivalente
     end
 
     def user_avatar(user)
-      unless defined?(user.photo)
-        return user_gravatar(user.email, size: 40)
-      end
-
       user.photo.attached? ? user.photo : user_gravatar(user.email, size: 40)
     end
 
