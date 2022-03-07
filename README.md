@@ -44,6 +44,10 @@ Setup `devise`:
 $ rails g devise:install
 ```
 
+Copy [locales](config/locales) (optional):
+```bash
+$ rails g polivalente:locales
+```
 
 ## Contributing
 Contribution directions go here.
