@@ -1,0 +1,7 @@
+<div class="tag-cloud">
+  <%= link_to "all", articles_path, class: class_names('all', { active: current_page?(articles_path) }) %>
+
+  <% tag_cloud(collection, %w{s m l}) do |tag, css_class| %>
+    <%= link_to "##{tag.name}", tag_path(tag.name), class: class_names(css_class, 'tag', { active: current_page?(tag_path(tag.name)) }) %>
+  <% end %>
+</div>

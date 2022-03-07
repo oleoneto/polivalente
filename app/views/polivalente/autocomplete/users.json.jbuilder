@@ -1,0 +1,1 @@
+json.array! @users, partial: "polivalente/users/user", as: :user

@@ -1,0 +1,17 @@
+<section aria-labelledby="recent-activities-title">
+	<div class="rounded-lg bg-white overflow-hidden shadow">
+	  <div class="p-6">
+	    <h2 class="text-base font-medium text-gray-900" id="recent-activities-title">Recent Activities</h2>
+	    <div class="flow-root mt-6">
+	      <ul role="list" class="-my-5 divide-y divide-gray-200">
+	      	<% activities.each do |activity| %>
+	      		<%= render "polivalente/users/activities/activity", activity: activity %>
+	      	<% end %>
+	      </ul>
+	    </div>
+	    <div class="mt-6">
+	      <a href="#" class="w-full flex justify-center items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"> View all </a>
+	    </div>
+	  </div>
+	</div>
+</section>

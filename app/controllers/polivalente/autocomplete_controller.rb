@@ -4,14 +4,13 @@ module Polivalente
 
     def tags
       @tags = Tag.all.latest
-      render json: @tags, status: 200
+      render "polivalente/autocomplete/tags"
     end
 
     def users
       user_class = Polivalente.config.user_class.constantize
-
       @users = user_class.all.latest
-      render json: @users, status: 200
+      render "polivalente/autocomplete/users"
     end
 
     protected

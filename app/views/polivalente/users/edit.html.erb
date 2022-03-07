@@ -1,2 +1,13 @@
-<h2><%= @user.name %></h2>
-<%= render "form", user: @user %>
+<h2 class="text-3xl font-semibold pb-4"><%= @user.name %></h2>
+
+<section class="max-w-3xl">
+	<%= rich_text_area :content,
+		class: "input-base bg-primary border-tertiary",
+		data: { controller: "trix-autocomplete autocomplete trix-attachment-blocker",
+			trix_autocomplete_url_value: autocomplete_users_path,
+			trix_autocomplete_trigger_value: "@"
+		}
+	%>
+	<!-- <span class="absolute text-sm border border-tertiary bg-primary rounded px-2 right-2 bottom-2" data-text-counter-target="output"></span> -->
+	<%#= render "form", user: @user %>
+</section>

@@ -1,0 +1,1 @@
+json.array! @tags, partial: "polivalente/tags/tag", as: :tag
