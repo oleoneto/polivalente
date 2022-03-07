@@ -4,6 +4,10 @@ Polivalente::Engine.routes.draw do
 
   resources :users, only: [:show, :edit, :update]
 
+  resources :archives, only: [:index, :show]
+
+  resources :trashes, only: [:index, :show]
+
   namespace :autocomplete, defaults: { format: :json } do
     get 'tags'
     get 'users'

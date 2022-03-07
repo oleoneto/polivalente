@@ -13,6 +13,7 @@ module Polivalente
     # Loads engine helpers in main application
     initializer "local_helper.action_controller" do
       ActiveSupport.on_load :action_controller do
+        helper Devise::Engine.helpers
         helper Polivalente::Engine.helpers
       end
     end
