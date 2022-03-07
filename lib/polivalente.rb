@@ -10,6 +10,7 @@ require "devise"
 require "discard"
 require "hotwire-rails"
 require "jbuilder"
+require "prefixed_ids"
 
 module Polivalente
   class << self

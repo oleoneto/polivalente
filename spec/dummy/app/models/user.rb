@@ -21,6 +21,8 @@ class User < ApplicationRecord
   
   has_one_attached :photo
 
+  has_prefix_id :user
+
   validates_length_of :first_name,  minimum: 2, maximum: 20
   validates_length_of :last_name,   minimum: 2, maximum: 20         
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }

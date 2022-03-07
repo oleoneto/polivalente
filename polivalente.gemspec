@@ -25,6 +25,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency "discard",                        "~> 1.2"
   spec.add_dependency "hotwire-rails",                  "~> 0.1.3"
   spec.add_dependency "jbuilder",                       "~> 2.11"
+  spec.add_dependency "prefixed_ids",                   "~> 1.2.2"
+
   spec.add_development_dependency "factory_bot_rails",  "~> 6.2"
   spec.add_development_dependency "faker",              "~> 2.19"
   spec.add_development_dependency "rspec-rails",        "~> 5.0"
