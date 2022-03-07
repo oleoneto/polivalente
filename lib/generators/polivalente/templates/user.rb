@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  include ActionText::Attachable
   include Polivalente::Archiver
   include Polivalente::Commentator
   include Polivalente::Reactor
