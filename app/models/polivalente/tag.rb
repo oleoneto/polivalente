@@ -1,5 +1,6 @@
 module Polivalente
   class Tag < ApplicationRecord
+    include ActionText::Attachable
     include Sortable
 
     has_many :taggings
