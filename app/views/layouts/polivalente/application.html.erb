@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html data-controller="theme" data-theme-target="theme">
 <head>
-  <title>Polivalente</title>
+  <title>
+    <%= @page_title.nil? ? "" : "#{@page_title} | " %><%= Rails.application.class %>
+  </title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <%= stylesheet_link_tag    "polivalente/application", media: "all" %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+  <%= javascript_include_tag "polivalente/application", media: "all", "data-turbolinks-track": "reload" %>
 </head>
 <body>
+
+<%= render 'polivalente/shared/offline_indicator' %>
+<%= render 'polivalente/shared/notices' %>
 
 <%= yield %>
 

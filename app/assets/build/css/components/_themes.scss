@@ -1,0 +1,69 @@
+/* True colors: SCSS RGB */
+$white:           rgba(255, 255, 255, 1);
+$off-white:       rgba(238, 242, 255, 1);
+$mint-cream:      rgba(244, 255, 253, 1);
+$gainsboro:       rgba(217, 217, 217, 1);
+$something-else:  rgba(254, 242, 242, 1);
+$aquamarine:      rgba(146, 255, 221, 1);
+$something-w:     rgba(249, 250, 251, 1);
+$something-x:     rgba(229, 231, 235, 1);
+$spring-frost:    rgba(146, 255, 27, 1);
+$naples-yellow:   rgba(249, 220, 92, 1);
+$blue:            rgba(99, 102, 241, 1);
+$space-cadet:     rgba(29, 52, 97, 1);
+$something-c:     rgba(239, 68, 68, 1);
+$red-crayola:     rgba(237, 37, 78, 1);
+$queen-blue:      rgba(55, 105, 150, 1);
+$ming:            rgba(60, 110, 113, 1);
+$something-f:     rgba(95, 85, 99, 1);
+$indigo:          rgba(75, 85, 99, 1);
+$indigo-dye:      rgba(40, 75, 99, 1);
+$something-b:     rgba(55, 65, 81, 1);
+$jet:             rgba(53, 53, 53, 1);
+$something-y:     rgba(31, 41, 55, 1);
+$dark-night:      rgba(17, 24, 39, 1);
+
+
+:root {
+  --color-bg-fill: rgba();
+  --color-bg-primary: $white;
+  --color-bg-secondary: $something-x;
+  --color-bg-muted: $dark-night;
+  --color-bg-inverted: $dark-night;
+
+  --color-text-primary: $something-y;
+  --color-text-secondary: $indigo;
+  --color-text-inverted: $something-w;
+  --color-text-muted: $something-x;
+
+  --color-border-primary: $something-y;
+  --color-border-secondary: $something-w;
+  --color-border-muted: $something-x;
+  --color-border-inverted: $something-x;
+
+  --color-button-accent: $white;
+  --color-button-accent-hover: $off-white;
+  --color-button-muted: $blue;
+  --color-button-inverted: $blue;
+}
+
+.dark {
+  --color-bg-primary: $dark-night;
+  --color-bg-secondary: $something-y;
+  --color-bg-tertiary: $something-b;
+  --color-bg-inverted: $something-w;
+  --color-bg-muted: $something-w;
+
+  --color-text-primary: $something-w;
+  --color-text-secondary: $indigo;
+  --color-text-tertiary: $something-f;
+  --color-text-inverted: $dark-night;
+
+  --color-border-primary: $something-x;
+  --color-border-secondary: 156, 163, 175;
+  --color-border-tertiary: $something-b;
+
+  --color-button-accent: $white;
+  --color-button-accent-hover: $off-white;
+  --color-button-muted: $something-c;
+}

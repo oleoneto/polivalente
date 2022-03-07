@@ -11,3 +11,4 @@
 /spec/dummy/tmp/
 *.gem
 .DS_Store
+_ignored/

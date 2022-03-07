@@ -1,0 +1,27 @@
+.clipboard--supported {
+  pre {
+    &.hljs {
+      pointer-events: all;
+      @apply bg-gray-800;
+    }
+  }
+
+  .code-sample {
+    pointer-events: none;
+    @apply bg-gray-800 border border-gray-800;
+    @apply px-2 py-0 my-6 rounded-md;
+    @apply flex flex-row relative;
+
+    button {
+      &.copy {
+        @apply bg-gray-100;
+        @apply absolute w-7 h-7 top-0 right-0 py-0.5 px-2 rounded-r rounded-bl;
+        @apply text-white text-xs uppercase hover:scale-110 hover:text-white hover:p-3 hover:bg-yellow-300;
+        pointer-events: all;
+        background-image: url('data:image/svg+xml;base64,PHN2ZyBjbGFzcz0idGV4dC13aGl0ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsPSJub25lIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0cm9rZT0iY3VycmVudENvbG9yIj4KICA8cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTggNUg2YTIgMiAwIDAwLTIgMnYxMmEyIDIgMCAwMDIgMmgxMGEyIDIgMCAwMDItMnYtMU04IDVhMiAyIDAgMDAyIDJoMmEyIDIgMCAwMDItMk04IDVhMiAyIDAgMDEyLTJoMmEyIDIgMCAwMTIgMm0wIDBoMmEyIDIgMCAwMTIgMnYzbTIgNEgxMG0wIDBsMy0zbS0zIDNsMyAzIiAvPgo8L3N2Zz4=');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+}

@@ -8,6 +8,7 @@ require "polivalente/configuration"
 require "active_model_serializers"
 require "devise"
 require "discard"
+require "hotwire-rails"
 
 module Polivalente
   class << self

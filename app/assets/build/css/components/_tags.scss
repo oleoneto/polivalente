@@ -1,0 +1,29 @@
+.tag-cloud {
+  width: 500px;
+  line-height: 1.6em;
+
+  .s { @apply text-xs }
+  .m { @apply text-lg }
+  .l { @apply text-2xl }
+
+  a {
+    @apply px-1.5 shadow-sm rounded-md font-light text-white;
+
+    &.all { @apply border border-primary bg-inverted text-inverted; }
+
+    &.tag {
+      @apply bg-indigo-600 border border-indigo-700;
+      @apply hover:bg-amber-400 hover:border-amber-500 hover:text-black;
+    }
+
+    &.active { @apply bg-amber-400 border-amber-500 text-black; }
+  }
+}
+
+.tag-list {
+  a {
+    @apply bg-indigo-600 border border-indigo-700;
+    @apply hover:bg-amber-400 hover:border-amber-500 hover:text-black;
+    @apply px-1.5 shadow-sm rounded-md font-light text-white;
+  }
+}

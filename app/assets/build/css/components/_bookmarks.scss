@@ -1,0 +1,20 @@
+@layer components {
+  .bookmarked {
+      &__article {
+        @apply bg-green-500 dark:bg-green-500;
+      }
+
+      &__comment {
+        @apply bg-indigo-500 dark:bg-indigo-500;
+        @apply text-gray-100;
+      }
+
+      &__episode {
+        @apply bg-yellow-500 dark:bg-yellow-500;
+      }
+
+      &__podcast {
+        @apply bg-yellow-500 dark:bg-yellow-500;
+      }
+  }
+}

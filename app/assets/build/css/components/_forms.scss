@@ -1,0 +1,23 @@
+.input-base {
+  @apply px-3 py-2 w-full;
+  @apply appearance-none rounded-md;
+  @apply focus:outline-none;
+  @apply transition duration-500;
+  @apply disabled:bg-muted;
+}
+
+.label-base {
+  @apply block mb-2;
+  @apply text-secondary text-sm font-semibold;
+}
+
+.devise-button-base {
+  @apply block;
+  @apply hover:opacity-95;
+  @apply px-3 py-2 w-full;
+  @apply border rounded;
+}
+
+.devise-link-base {
+  @apply my-1 block;
+}
