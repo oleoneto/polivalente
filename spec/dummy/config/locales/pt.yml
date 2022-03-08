@@ -1,0 +1,58 @@
+pt:
+  member_since: "membro desde"
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: aproximadamente 1 hora atrás
+        other: aproximadamente %{count} horas atrás
+      about_x_months:
+        one: aproximadamente 1 mês atrás
+        other: aproximadamente %{count} meses atrás
+      about_x_years:
+        one: aproximadamente 1 ano atrás
+        other: aproximadamente %{count} anos atrás
+      almost_x_years:
+        one: quase 1 ano atrás
+        other: quase %{count} anos atrás
+      half_a_minute: meio minuto atrás
+      less_than_x_seconds:
+        one: menos de 1 segundo atrás
+        other: menos de %{count} segundos atrás
+      less_than_x_minutes:
+        one: menos de um minuto atrás
+        other: menos de %{count} minutos atrás
+      over_x_years:
+        one: mais de 1 ano atrás
+        other: mais de %{count} anos atrás
+      x_seconds:
+        one: 1 segundo atrás
+        other: "%{count} segundos atrás"
+      x_minutes:
+        one: 1 minuto atrás
+        other: "%{count} minutos atrás"
+      x_days:
+        one: 1 dia atrás
+        other: "%{count} dias atrás"
+      x_months:
+        one: 1 mês atrás
+        other: "%{count} meses atrás"
+      x_years:
+        one: 1 ano atrás
+        other: "%{count} anos atrás"
+  configuration: "Configuração"
+  current_locale: "Locação atual"
+  available_locales: "Locações disponíveis"
+  trash:
+    time_to_live: "Duração de lixeira"
+  key: "chave"
+  value: "valor"
+  errors:
+    messages:
+      already_confirmed: já foi confirmado, por favor tente efectuar a autenticação
+      confirmation_period_expired: necessitava de confirmação até %{period}, por favor faça um novo pedido
+      expired: expirou, por favor solicite um novo
+      not_found: não foi encontrado
+      not_locked: não foi bloqueado
+      not_saved:
+        one: '1 erro impediu %{resource} de ser gravado:'
+        other: "%{count} erros impediram %{resource} de ser gravado:"
