@@ -21,7 +21,7 @@ module Polivalente
       end
 
       def add_devise_i18n_gem
-        gem 'devise-18n'
+        gem 'devise-i18n'
       end
 
       def show_readme
