@@ -1,0 +1,10 @@
+<nav data-controller="offline" class="fixed bottom-0 right-5 z-10 text-red-600 dark:text-red-500 font-semibold">
+  <div data-offline-target="indicator" class="w-full bg-primary my-2 max-w-2xl mx-auto hidden border border-tertiary rounded-md px-4 py-3 shadow-md mb-3" role="alert">
+    <div class="flex items-center space-x-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+      </svg>
+      <p class="text-sm"><%= t("views.errors.offline") %></p>
+    </div>
+  </div>
+</nav>
