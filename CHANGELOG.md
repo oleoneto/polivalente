@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/oleoneto/cartofi/compare/v0.6.2...v0.7.0) (2022-03-08)
+
+
+### Features
+
+* **assets:** adds js and css ([8aa3c51](https://github.com/oleoneto/cartofi/commits/8aa3c51e60d0704d07dfdd655796de9338c7d9db))
+* **comments:** adds comments controller ([51a3572](https://github.com/oleoneto/cartofi/commits/51a3572570732570d760aaf4abe8bb16468dec6f))
+* **controllers:** adds archives and trash routes ([63859a6](https://github.com/oleoneto/cartofi/commits/63859a68fbc6bcf7edd05646f10a24981b1efcb7))
+* **controllers:** updates users#show and set_user action ([b47a0a4](https://github.com/oleoneto/cartofi/commits/b47a0a4703326a97b117e4dd22db183a09a23048))
+* **gravatar:** remove if-condition ([8a323ac](https://github.com/oleoneto/cartofi/commits/8a323ac29f30fd8be8279801f805e85d12a7e088))
+* **locales:** updates locales ([b73ad5f](https://github.com/oleoneto/cartofi/commits/b73ad5f17d295f3ec133031a07519005c874f393))
+* **models:** adds ActionText::Attachable ([6e070f1](https://github.com/oleoneto/cartofi/commits/6e070f1658786646c77eb2708f017faca5bf7825))
+* **models:** adds ActionText::Attachable ([7cb2ecd](https://github.com/oleoneto/cartofi/commits/7cb2ecdd9eb7e0a4eb04f3bf5b33155b89e2f030))
+* **models:** adds prefixed_ids ([4e6a37a](https://github.com/oleoneto/cartofi/commits/4e6a37adfbc3828009068b81f30ef6a84abf7142))
+* **users:** adds users controller ([fd0a676](https://github.com/oleoneto/cartofi/commits/fd0a67648a0a8d17b9454fa984a8189399e2c5d7))
+* **views:** add shared templates ([46b5869](https://github.com/oleoneto/cartofi/commits/46b58699781dfcba06b591a911ddc469550eab43))
+* **views:** updates views ([21867f3](https://github.com/oleoneto/cartofi/commits/21867f36a0963e45a4cdda29c579a73aec368aa8))
+
+
+### Bug Fixes
+
+* **gem:** adds jbuilder ([e34d8e0](https://github.com/oleoneto/cartofi/commits/e34d8e097f86f1203c406653a9c444b819ecf5b6))
+* **generators:** correct gem name for devise-i18n ([b64a599](https://github.com/oleoneto/cartofi/commits/b64a599fbccc35d54af577000e281d7a348b795e))
+
 ### [0.6.2](https://github.com/oleoneto/cartofi/compare/v0.6.1...v0.6.2) (2022-02-27)
 
 
